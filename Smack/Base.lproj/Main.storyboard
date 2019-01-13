@@ -282,7 +282,7 @@
                                     <constraint firstAttribute="height" constant="30" id="j9k-v9-Wia"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <state key="normal" title="Don't not account? Sign Up here"/>
+                                <state key="normal" title="Vous n'avez pas encore de compte? Inscrvez vous"/>
                                 <state key="highlighted">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
