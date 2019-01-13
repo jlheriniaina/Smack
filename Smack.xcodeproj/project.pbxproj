@@ -12,6 +12,7 @@
 		A01E799421EB76E400C2C00D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E799321EB76E400C2C00D /* LoginViewController.swift */; };
 		A01E799621EB798F00C2C00D /* InscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E799521EB798F00C2C00D /* InscriptionViewController.swift */; };
 		A01E799821EBB1FC00C2C00D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E799721EBB1FC00C2C00D /* AuthService.swift */; };
+		A01E799A21EBC46300C2C00D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E799921EBC46300C2C00D /* RoundedButton.swift */; };
 		A04D9B8521E0D70100B10A48 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04D9B8321E0D70100B10A48 /* SWRevealViewController.m */; };
 		A0747B8421EB453400664B7E /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0747B8321EB453400664B7E /* ChannelViewController.swift */; };
 		A0FA4B5321E089F200F0EBA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA4B5221E089F200F0EBA7 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 		A01E799321EB76E400C2C00D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A01E799521EB798F00C2C00D /* InscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionViewController.swift; sourceTree = "<group>"; };
 		A01E799721EBB1FC00C2C00D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A01E799921EBC46300C2C00D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		A04D9B8221E0D6BC00B10A48 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		A04D9B8321E0D70100B10A48 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A04D9B8421E0D70100B10A48 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				A01E798C21EB5BF100C2C00D /* GradientView.swift */,
+				A01E799921EBC46300C2C00D /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01E799421EB76E400C2C00D /* LoginViewController.swift in Sources */,
+				A01E799A21EBC46300C2C00D /* RoundedButton.swift in Sources */,
 				A0747B8421EB453400664B7E /* ChannelViewController.swift in Sources */,
 				A0FA4B5521E089F200F0EBA7 /* HomeViewController.swift in Sources */,
 				A01E799821EBB1FC00C2C00D /* AuthService.swift in Sources */,

@@ -10,31 +10,31 @@ import Foundation
 import Alamofire
 
 
- class AuthService {
+public class AuthService {
     
-    static let authService = AuthService()
-    let userDefault = UserDefaults.standard
+  public  static let instance = AuthService()
+  public let userDefault = UserDefaults.standard
     
-    func getIsLoggin() -> Bool {
+  public  func getIsLoggin() -> Bool {
         return userDefault.bool(forKey: LOGGED_IN_KEY)
     }
-    func setIsLoggin(loginKey: Bool){
+  public func setIsLoggin(loginKey: Bool){
         userDefault.set(loginKey, forKey: LOGGED_IN_KEY)
     }
-    func getAuthToken() -> String {
+  public func getAuthToken() -> String {
         
       return userDefault.value(forKey: TOKEN_KEY) as! String
     }
-    func setAuthToken(token: String){
+  public func setAuthToken(token: String){
       userDefault.set(token, forKey: TOKEN_KEY)
     }
-    func getUserEmail() -> String {
+  public func getUserEmail() -> String {
         return userDefault.value(forKey: USER_EMAIL) as! String
     }
-    func setUserEmail(email: String) {
+  public func setUserEmail(email: String) {
         userDefault.set(email, forKey: USER_EMAIL)
     }
-    func registerUser(email: String, password: String, competion: @escaping taskComplet) {
+    public func registerUser(email: String, password: String, competion: @escaping taskComplet) {
         let header = ["Content-Type": "application/json; chaset=utf8"]
         let requestParams : [String : Any] = ["email": email.lowercased(), "password": password]
       

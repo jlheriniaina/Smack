@@ -26,4 +26,17 @@ class InscriptionViewController: UIViewController {
     
     @IBAction func onClickChoseAvatar(_ sender: Any) {
     }
+    
+    @IBAction func onClickPickBgColor(_ sender: Any) {
+    }
+    @IBAction func onClickResister(_ sender: Any) {
+        guard let email = emailTxtField.text, emailTxtField.text != nil else { return }
+        guard let password = passwordTxtField.text, passwordTxtField.text != nil else { return }
+        AuthService.instance.registerUser(email: email, password: password) { (handler) in
+            if handler {
+                print("Register succefull")
+            }
+        }
+    }
+    
 }

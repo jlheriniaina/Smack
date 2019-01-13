@@ -15,7 +15,7 @@ let CREATE_ACCOUNT = "toCreateAccount"
 let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggIn"
 let USER_EMAIL = "email"
-typealias taskComplet = ( _ Success: Bool) -> ()
+public typealias TaskComplet = ( _ Success: Bool) -> ()
 let BASE_URL = "https://chatyapismack.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)/account/register"
 
