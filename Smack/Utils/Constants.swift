@@ -10,4 +10,6 @@ import Foundation
 
 
 let LOGIN_VC = "toLogin"
+let CREATE_ACCOUNT = "toCreateAccount"
+
 

@@ -19,4 +19,7 @@ class ChannelViewController: UIViewController {
     @IBAction func onClckLogin(_ sender: Any) {
         performSegue(withIdentifier: LOGIN_VC, sender: nil)
     }
+    @IBAction func prerformeUnwind(sender : UIStoryboard){
+    
+    }
 }
