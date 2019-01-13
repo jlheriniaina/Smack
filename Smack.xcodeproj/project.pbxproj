@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A01E798D21EB5BF100C2C00D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E798C21EB5BF100C2C00D /* GradientView.swift */; };
 		A04D9B8521E0D70100B10A48 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04D9B8321E0D70100B10A48 /* SWRevealViewController.m */; };
 		A0747B8421EB453400664B7E /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0747B8321EB453400664B7E /* ChannelVC.swift */; };
 		A0FA4B5321E089F200F0EBA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA4B5221E089F200F0EBA7 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		6AC2162D55FFED7FB178C7B1 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9639C61F5408653F9D8F72BB /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
+		A01E798C21EB5BF100C2C00D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A04D9B8221E0D6BC00B10A48 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		A04D9B8321E0D70100B10A48 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A04D9B8421E0D70100B10A48 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		A0FA4B6721E08A1E00F0EBA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A01E798C21EB5BF100C2C00D /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			files = (
 				A0747B8421EB453400664B7E /* ChannelVC.swift in Sources */,
 				A0FA4B5521E089F200F0EBA7 /* HomeVC.swift in Sources */,
+				A01E798D21EB5BF100C2C00D /* GradientView.swift in Sources */,
 				A0FA4B5321E089F200F0EBA7 /* AppDelegate.swift in Sources */,
 				A04D9B8521E0D70100B10A48 /* SWRevealViewController.m in Sources */,
 			);
