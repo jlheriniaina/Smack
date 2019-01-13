@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var btnMenu: UIButton!
     override func viewDidLoad() {
