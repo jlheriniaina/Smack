@@ -8,16 +8,24 @@
 
 import Foundation
 
+typealias CompletTask = ( _ Success: Bool) -> ()
+typealias CompletionHandeler = (_ Succes: Bool , _ data: [Channel] ) -> ()
+typealias CompletionResult = (_ Sucess: Bool , _ channel: Channel ) -> ()
 
 let LOGIN_VC = "toLogin"
 let CREATE_ACCOUNT = "toCreateAccount"
-//userDefaults
-let TOKEN_KEY = "token"
-let LOGGED_IN_KEY = "loggIn"
-let USER_EMAIL = "email"
-public typealias TaskComplet = ( _ Success: Bool) -> ()
 let BASE_URL = "https://chatyapismack.herokuapp.com/v1/"
+//let BASE_URL = "http://localhost:3005/v1"
+
 let URL_REGISTER = "\(BASE_URL)/account/register"
+let URL_LOGIN = "\(BASE_URL)/account/login"
+let URL_ADD_USER = "\(BASE_URL)/user/add"
+let URL_GET_USER_EMAIL = "\(BASE_URL)/byEmail/"
+let URL_GET_CHANNEL = "\(BASE_URL)/channel"
+
+let NOTIF_DATA_USER = Notification.Name("notifUserDataChange")
+
+
 
 
 
