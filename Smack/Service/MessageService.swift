@@ -63,5 +63,8 @@ class MessageService {
  func clearChannel() {
     channels.removeAll()
   }
+ func clearMessage()  {
+        messages.removeAll()
+ }
     
 }

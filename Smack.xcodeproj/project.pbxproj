@@ -22,10 +22,12 @@
 		A043152921EE5009003765DC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A043152821EE5009003765DC /* User.swift */; };
 		A04D9B8521E0D70100B10A48 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04D9B8321E0D70100B10A48 /* SWRevealViewController.m */; };
 		A0747B8421EB453400664B7E /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0747B8321EB453400664B7E /* ChannelViewController.swift */; };
+		A0D9785E21F3A9D500840B1A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9785D21F3A9D500840B1A /* Utils.swift */; };
 		A0DEDB5A21F2F67600B56667 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEDB5921F2F67600B56667 /* SocketService.swift */; };
 		A0DEDB5C21F33FE600B56667 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEDB5B21F33FE600B56667 /* Message.swift */; };
 		A0DEDB5E21F3451700B56667 /* CompletionResultAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEDB5D21F3451700B56667 /* CompletionResultAlias.swift */; };
 		A0DEDB6021F3580C00B56667 /* KeyboardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEDB5F21F3580C00B56667 /* KeyboardUIView.swift */; };
+		A0DEDB6221F3653F00B56667 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEDB6121F3653F00B56667 /* MessageCell.swift */; };
 		A0E12C2221F0DCCD00C42617 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E12C2021F0DCCD00C42617 /* ProfilViewController.swift */; };
 		A0E12C2321F0DCCD00C42617 /* ProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0E12C2121F0DCCD00C42617 /* ProfilViewController.xib */; };
 		A0F2754B21F23CA4001BEF89 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F2754A21F23CA4001BEF89 /* MessageService.swift */; };
@@ -61,10 +63,12 @@
 		A04D9B8321E0D70100B10A48 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A04D9B8421E0D70100B10A48 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A0747B8321EB453400664B7E /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		A0D9785D21F3A9D500840B1A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A0DEDB5921F2F67600B56667 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		A0DEDB5B21F33FE600B56667 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A0DEDB5D21F3451700B56667 /* CompletionResultAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionResultAlias.swift; sourceTree = "<group>"; };
 		A0DEDB5F21F3580C00B56667 /* KeyboardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardUIView.swift; sourceTree = "<group>"; };
+		A0DEDB6121F3653F00B56667 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		A0E12C2021F0DCCD00C42617 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
 		A0E12C2121F0DCCD00C42617 /* ProfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilViewController.xib; sourceTree = "<group>"; };
 		A0F2754A21F23CA4001BEF89 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			children = (
 				A01E799121EB6A9800C2C00D /* Constants.swift */,
 				A0DEDB5D21F3451700B56667 /* CompletionResultAlias.swift */,
+				A0D9785D21F3A9D500840B1A /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				A03EC1D221EFB0E100A6B6E6 /* CircleImageView.swift */,
 				A0F2754E21F24736001BEF89 /* ChannelCell.swift */,
 				A0DEDB5F21F3580C00B56667 /* KeyboardUIView.swift */,
+				A0DEDB6121F3653F00B56667 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 				A0DEDB5E21F3451700B56667 /* CompletionResultAlias.swift in Sources */,
 				A03EC1D321EFB0E100A6B6E6 /* CircleImageView.swift in Sources */,
 				A0F2754D21F23D51001BEF89 /* Channel.swift in Sources */,
+				A0D9785E21F3A9D500840B1A /* Utils.swift in Sources */,
 				A0DEDB6021F3580C00B56667 /* KeyboardUIView.swift in Sources */,
 				A043152921EE5009003765DC /* User.swift in Sources */,
 				A0F2755221F25A96001BEF89 /* NChannelViewController.swift in Sources */,
@@ -366,6 +373,7 @@
 				A0DEDB5C21F33FE600B56667 /* Message.swift in Sources */,
 				A03EC1CB21EF909000A6B6E6 /* AvatarPickerViewController.swift in Sources */,
 				A01E799221EB6A9800C2C00D /* Constants.swift in Sources */,
+				A0DEDB6221F3653F00B56667 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

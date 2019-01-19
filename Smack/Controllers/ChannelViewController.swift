@@ -18,6 +18,8 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.estimatedRowHeight = 40
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 40
         NotificationCenter.default.addObserver(self, selector: #selector(userData(_:)), name: NOTIF_DATA_USER, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadChannels(_:)), name: NOTIF_LOAD_CHANNEL, object: nil)
@@ -75,7 +77,7 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
             let user = UserSessionManager.instance.getIsLoginUser()
             btnLogin.setTitle(user["name"] as! String, for: .normal)
             avatarImageView.image = UIImage(named: user["avatarName"] as! String)
-            avatarImageView.backgroundColor = colorImage(color: user["avatarColor"] as! String)
+            avatarImageView.backgroundColor = Utils.colorImage(color: user["avatarColor"] as! String)
             
         }else {
             btnLogin.setTitle("Login", for: UIControlState.normal)
@@ -85,27 +87,7 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.tableView.reloadData()
         }
     }
-    func colorImage(color : String) -> UIColor {
-        let scanner = Scanner(string: color)
-        let spiked = CharacterSet(charactersIn: "[], ")
-        let sp = CharacterSet(charactersIn: ",")
-        scanner.charactersToBeSkipped = spiked
-        var r,g, b, a : NSString?
-        scanner.scanUpToCharacters(from: sp, into: &r)
-        scanner.scanUpToCharacters(from: sp, into: &g)
-        scanner.scanUpToCharacters(from: sp, into: &b)
-        scanner.scanUpToCharacters(from: sp, into: &a)
-        let defaultColor = UIColor.lightGray
-        guard let rRed = r else {return defaultColor}
-        guard let rGreen = g else {return defaultColor}
-        guard let rBleu = b else {return defaultColor}
-        guard let rAlpha = a else {return defaultColor}
-        let rFloat = CGFloat(rRed.doubleValue)
-        let gFloat = CGFloat(rGreen.doubleValue)
-        let bFloat = CGFloat(rBleu.doubleValue)
-        let aFloat = CGFloat(rAlpha.doubleValue)
-        return UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
-    }
+   
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

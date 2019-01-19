@@ -26,29 +26,8 @@ class ProfilViewController: UIViewController {
         usernameLbl.text = dict["name"] as! String
         emailLbl.text = dict["email"] as! String
         profilImageView.image = UIImage(named: dict["avatarName"] as! String)
-        profilImageView.backgroundColor = colorImage(color: dict["avatarColor"] as! String)
+        profilImageView.backgroundColor = Utils.colorImage(color: dict["avatarColor"] as! String)
         
-    }
-    func colorImage(color : String) -> UIColor {
-        let scanner = Scanner(string: color)
-        let spiked = CharacterSet(charactersIn: "[], ")
-        let sp = CharacterSet(charactersIn: ",")
-        scanner.charactersToBeSkipped = spiked
-        var r,g, b, a : NSString?
-        scanner.scanUpToCharacters(from: sp, into: &r)
-        scanner.scanUpToCharacters(from: sp, into: &g)
-        scanner.scanUpToCharacters(from: sp, into: &b)
-        scanner.scanUpToCharacters(from: sp, into: &a)
-        let defaultColor = UIColor.lightGray
-        guard let rRed = r else {return defaultColor}
-        guard let rGreen = g else {return defaultColor}
-        guard let rBleu = b else {return defaultColor}
-        guard let rAlpha = a else {return defaultColor}
-        let rFloat = CGFloat(rRed.doubleValue)
-        let gFloat = CGFloat(rGreen.doubleValue)
-        let bFloat = CGFloat(rBleu.doubleValue)
-        let aFloat = CGFloat(rAlpha.doubleValue)
-        return UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
     }
     @IBAction func onClickClose(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

@@ -48,5 +48,31 @@ class SocketService: NSObject {
                    message.getUsername(), message.getUserAvatar(), message.getUserColorAvatar())
         completion(true)
     }
+    func getMessage(completion: @escaping CompletTask) {
+        socket.on("messageCreated") { (data, emiteur) in
+            guard let messageBody = data[0] as? String else { return }
+            guard let userId = data[1] as? String else { return }
+            guard let channelId = data[2] as? String else { return }
+            guard let userName = data[3] as? String else { return }
+            guard let userAvatar = data[4] as? String else { return }
+            guard let userAvatarColor = data[5] as? String else { return }
+            guard let id = data[6] as? String else { return }
+            guard let timeStamp = data[7] as? String else { return }
+            if channelId == MessageService.instance.channel.getId() && UserSessionManager.instance.getIslogin() {
+                let newMessage = Message(id: id, content: messageBody, idUser: userId, idChannel: channelId, name: userName, avatar: userAvatar, color: userAvatarColor, time: timeStamp)
+                MessageService.instance.messages.append(newMessage)
+                 completion(true)
+            }else {
+                completion(false)
+            }
+           
+        }
+    }
+    func doListenTapingMessage(_ completionHandeler: @escaping (_ doListenTapingUser: [String: String]) -> Void) {
+        socket.on("userTypingUpdate") { (dataArray, ack) in
+            guard let typingUsers = dataArray[0] as? [String: String] else { return }
+            completionHandeler(typingUsers)
+        }
+    }
     
 }
