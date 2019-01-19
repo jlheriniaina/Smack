@@ -13,6 +13,8 @@ class MessageService {
     public static let instance = MessageService()
     public var channels = [Channel]()
     public var channel: Channel!
+    public var messages = [Message]()
+    
     
     func allChannel(completion: @escaping CompletionHandeler) {
         let header = ["Authorization":"Bearer \(UserSessionManager.instance.getToken())",
@@ -40,8 +42,26 @@ class MessageService {
             }
         }
     }
-    func clearChannel() {
-        channels.removeAll()
-    }
+    func allMessage(id: String, completion: @escaping CompletionMessage) {
+    let header = ["Authorization":"Bearer \(UserSessionManager.instance.getToken())",
+        "Content-Type": "application/json; chaset=utf8"]
+      Alamofire.request(URL_GET_MESSAGE+id,method: .get, parameters: nil,
+                      encoding: JSONEncoding.default, headers: header).responseJSON { (responses) in
+         if responses.result.error == nil {
+          do {
+            guard let data = responses.data else { return }
+            self.messages = try JSONDecoder().decode([Message].self, from: data)
+             completion(true, self.messages)
+            }catch let error {
+                print(error.localizedDescription)
+            }
+         }else {
+             completion(false, self.messages)
+        }
+     }
+  }
+ func clearChannel() {
+    channels.removeAll()
+  }
     
 }

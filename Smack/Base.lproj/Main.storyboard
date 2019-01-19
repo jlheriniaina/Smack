@@ -71,23 +71,45 @@
                                     <constraint firstAttribute="bottom" secondItem="4Tf-EB-uCZ" secondAttribute="bottom" constant="12" id="oIe-QC-1hh"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ecrire votre message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0SB-QU-bwZ">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tob-ws-bFn"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoo-F5-XLm">
+                                <rect key="frame" x="337" y="632" width="30" height="30"/>
+                                <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="onClickSendMessage:" destination="PDO-7p-SkX" eventType="touchUpInside" id="TYl-H0-oh7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="M9y-9B-lKa" firstAttribute="trailing" secondItem="Aoo-F5-XLm" secondAttribute="trailing" constant="8" id="52K-xl-VXN"/>
+                            <constraint firstItem="0SB-QU-bwZ" firstAttribute="bottom" secondItem="M9y-9B-lKa" secondAttribute="bottom" id="5le-Eb-grJ"/>
                             <constraint firstItem="C8f-Io-atg" firstAttribute="trailing" secondItem="M9y-9B-lKa" secondAttribute="trailing" id="6Oa-KK-eMg"/>
                             <constraint firstItem="C8f-Io-atg" firstAttribute="leading" secondItem="M9y-9B-lKa" secondAttribute="leading" id="8Ty-G5-KeO"/>
+                            <constraint firstItem="Aoo-F5-XLm" firstAttribute="centerY" secondItem="0SB-QU-bwZ" secondAttribute="centerY" id="Xsg-2C-58k"/>
+                            <constraint firstItem="0SB-QU-bwZ" firstAttribute="trailing" secondItem="M9y-9B-lKa" secondAttribute="trailing" id="gKr-ih-WsI"/>
+                            <constraint firstItem="0SB-QU-bwZ" firstAttribute="leading" secondItem="M9y-9B-lKa" secondAttribute="leading" id="mTL-dD-mc6"/>
                             <constraint firstItem="C8f-Io-atg" firstAttribute="top" secondItem="Ma3-RN-9bD" secondAttribute="top" id="ybl-n0-5gl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M9y-9B-lKa"/>
                     </view>
                     <connections>
                         <outlet property="btnMenu" destination="4Tf-EB-uCZ" id="ORH-nZ-Z9t"/>
+                        <outlet property="messageTxtField" destination="0SB-QU-bwZ" id="TTx-m8-kWY"/>
                         <outlet property="titleLbl" destination="zL6-q9-dCu" id="KrJ-iO-X8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71I-58-Mfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="432"/>
+            <point key="canvasLocation" x="932" y="431.33433283358323"/>
         </scene>
         <!--Channel View Controller-->
         <scene sceneID="ABR-wG-cDr">
@@ -620,6 +642,7 @@
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="profileDefault" width="192" height="192"/>
+        <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>

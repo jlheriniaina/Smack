@@ -23,6 +23,9 @@
 		A04D9B8521E0D70100B10A48 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04D9B8321E0D70100B10A48 /* SWRevealViewController.m */; };
 		A0747B8421EB453400664B7E /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0747B8321EB453400664B7E /* ChannelViewController.swift */; };
 		A0DEDB5A21F2F67600B56667 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEDB5921F2F67600B56667 /* SocketService.swift */; };
+		A0DEDB5C21F33FE600B56667 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEDB5B21F33FE600B56667 /* Message.swift */; };
+		A0DEDB5E21F3451700B56667 /* CompletionResultAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEDB5D21F3451700B56667 /* CompletionResultAlias.swift */; };
+		A0DEDB6021F3580C00B56667 /* KeyboardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEDB5F21F3580C00B56667 /* KeyboardUIView.swift */; };
 		A0E12C2221F0DCCD00C42617 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E12C2021F0DCCD00C42617 /* ProfilViewController.swift */; };
 		A0E12C2321F0DCCD00C42617 /* ProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0E12C2121F0DCCD00C42617 /* ProfilViewController.xib */; };
 		A0F2754B21F23CA4001BEF89 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F2754A21F23CA4001BEF89 /* MessageService.swift */; };
@@ -59,6 +62,9 @@
 		A04D9B8421E0D70100B10A48 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A0747B8321EB453400664B7E /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		A0DEDB5921F2F67600B56667 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		A0DEDB5B21F33FE600B56667 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A0DEDB5D21F3451700B56667 /* CompletionResultAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionResultAlias.swift; sourceTree = "<group>"; };
+		A0DEDB5F21F3580C00B56667 /* KeyboardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardUIView.swift; sourceTree = "<group>"; };
 		A0E12C2021F0DCCD00C42617 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
 		A0E12C2121F0DCCD00C42617 /* ProfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilViewController.xib; sourceTree = "<group>"; };
 		A0F2754A21F23CA4001BEF89 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				A01E799121EB6A9800C2C00D /* Constants.swift */,
+				A0DEDB5D21F3451700B56667 /* CompletionResultAlias.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -166,6 +173,7 @@
 				A03EC1CC21EF92AA00A6B6E6 /* AvatarCell.swift */,
 				A03EC1D221EFB0E100A6B6E6 /* CircleImageView.swift */,
 				A0F2754E21F24736001BEF89 /* ChannelCell.swift */,
+				A0DEDB5F21F3580C00B56667 /* KeyboardUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 				A03EC1CE21EF987D00A6B6E6 /* AvatarType.swift */,
 				A03EC1D421EFD17500A6B6E6 /* Utilisateur.swift */,
 				A0F2754C21F23D51001BEF89 /* Channel.swift */,
+				A0DEDB5B21F33FE600B56667 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,8 +340,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DEDB5E21F3451700B56667 /* CompletionResultAlias.swift in Sources */,
 				A03EC1D321EFB0E100A6B6E6 /* CircleImageView.swift in Sources */,
 				A0F2754D21F23D51001BEF89 /* Channel.swift in Sources */,
+				A0DEDB6021F3580C00B56667 /* KeyboardUIView.swift in Sources */,
 				A043152921EE5009003765DC /* User.swift in Sources */,
 				A0F2755221F25A96001BEF89 /* NChannelViewController.swift in Sources */,
 				A0F2754B21F23CA4001BEF89 /* MessageService.swift in Sources */,
@@ -352,6 +363,7 @@
 				A0FA4B5321E089F200F0EBA7 /* AppDelegate.swift in Sources */,
 				A04D9B8521E0D70100B10A48 /* SWRevealViewController.m in Sources */,
 				A03EC1D521EFD17500A6B6E6 /* Utilisateur.swift in Sources */,
+				A0DEDB5C21F33FE600B56667 /* Message.swift in Sources */,
 				A03EC1CB21EF909000A6B6E6 /* AvatarPickerViewController.swift in Sources */,
 				A01E799221EB6A9800C2C00D /* Constants.swift in Sources */,
 			);

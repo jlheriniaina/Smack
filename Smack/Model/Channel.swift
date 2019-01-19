@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Channel : Codable {
+class Channel : Decodable {
     private var _id: String!
     private var name: String!
     private var description: String!

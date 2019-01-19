@@ -43,4 +43,10 @@ class SocketService: NSObject {
             completion(true,channel)
         }
     }
+    func sendMesage(message: Message, completion: @escaping CompletTask) {
+       socket.emit("newMessage", message.getContent(), message.getUserId(), message.getChannelId(),
+                   message.getUsername(), message.getUserAvatar(), message.getUserColorAvatar())
+        completion(true)
+    }
+    
 }
