@@ -58,5 +58,6 @@ class UserSessionManager {
         userDefault.removeObject(forKey: KEY_USER_EMAIL)
         userDefault.removeObject(forKey: KEY_USER_TOKEN)
         setIsLogin(isLogin: false)
+        MessageService.instance.clearChannel()
     }
 }

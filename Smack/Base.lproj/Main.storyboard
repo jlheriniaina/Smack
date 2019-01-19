@@ -82,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="btnMenu" destination="4Tf-EB-uCZ" id="ORH-nZ-Z9t"/>
+                        <outlet property="titleLbl" destination="zL6-q9-dCu" id="KrJ-iO-X8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71I-58-Mfr" userLabel="First Responder" sceneMemberID="firstResponder"/>

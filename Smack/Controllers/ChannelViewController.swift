@@ -20,6 +20,7 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.dataSource = self
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 40
         NotificationCenter.default.addObserver(self, selector: #selector(userData(_:)), name: NOTIF_DATA_USER, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadChannels(_:)), name: NOTIF_LOAD_CHANNEL, object: nil)
         if UserSessionManager.instance.getIslogin() {
             MessageService.instance.allChannel { (succes, listChannel) in
                 if succes && !listChannel.isEmpty {
@@ -38,9 +39,12 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func onClickShowVC(_ sender: Any) {
-        let newChannelVC = NChannelViewController()
-        newChannelVC.modalPresentationStyle = .custom
-        present(newChannelVC, animated: true, completion: nil)
+        if UserSessionManager.instance.getIslogin() {
+            let newChannelVC = NChannelViewController()
+            newChannelVC.modalPresentationStyle = .custom
+            present(newChannelVC, animated: true, completion: nil)
+        }
+       
     }
     
     @IBAction func onClckLogin(_ sender: Any) {
@@ -62,6 +66,10 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
     @objc func userData(_ notif: Notification){
           self.userInfo()
     }
+    @objc func loadChannels(_ notif: Notification){
+        self.channels = MessageService.instance.channels
+        self.tableView.reloadData()
+    }
     func userInfo() {
         if UserSessionManager.instance.getIslogin() {
             let user = UserSessionManager.instance.getIsLoginUser()
@@ -72,6 +80,9 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
         }else {
             btnLogin.setTitle("Login", for: UIControlState.normal)
             avatarImageView.image = #imageLiteral(resourceName: "menuProfileIcon")
+            avatarImageView.backgroundColor = UIColor.clear
+            self.channels.removeAll()
+            self.tableView.reloadData()
         }
     }
     func colorImage(color : String) -> UIColor {
@@ -93,7 +104,7 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
         let gFloat = CGFloat(rGreen.doubleValue)
         let bFloat = CGFloat(rBleu.doubleValue)
         let aFloat = CGFloat(rAlpha.doubleValue)
-        return UIColor(red: rFloat, green: bFloat, blue: gFloat, alpha: aFloat)
+        return UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -110,5 +121,11 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let channel = self.channels[indexPath.row]
+        MessageService.instance.channel = channel
+        NotificationCenter.default.post(name: NOTIF_LOAD_SELECTED, object: nil)
+        self.revealViewController().revealToggle(animated: true)
     }
 }

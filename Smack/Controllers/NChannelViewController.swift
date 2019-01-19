@@ -11,6 +11,7 @@ import UIKit
 class NChannelViewController: UIViewController {
     @IBOutlet weak var nameLbl: UITextField!
     @IBOutlet weak var descTxtField: UITextField!
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +22,20 @@ class NChannelViewController: UIViewController {
     }
     
     @IBAction func onClickSave(_ sender: Any) {
+        self.loadingView.isHidden = false
+        self.loadingView.startAnimating()
         guard let nom = nameLbl.text, nameLbl.text != nil else { return }
         guard let desciption = descTxtField.text, descTxtField.text != nil else { return }
         SocketService.instance.createChannel(name: nom, desc: desciption) { (succes) in
             if succes {
+                self.loadingView.isHidden = true
+                self.loadingView.stopAnimating()
                 self.dismiss(animated: true, completion: nil)
             }
         }
     }
     func initView() {
+        self.loadingView.isHidden = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
         tap.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tap)

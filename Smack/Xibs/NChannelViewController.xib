@@ -19,6 +19,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NChannelViewController" customModule="Smack" customModuleProvider="target">
             <connections>
                 <outlet property="descTxtField" destination="eJm-Y7-bxo" id="LfR-xz-2Bc"/>
+                <outlet property="loadingView" destination="48I-8k-XKl" id="dbp-xO-bZ0"/>
                 <outlet property="nameLbl" destination="9HO-ba-Eus" id="SAp-mb-GmC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -111,18 +112,30 @@
                                 <action selector="onClickSave:" destination="-1" eventType="touchUpInside" id="kvj-gN-C9G"/>
                             </connections>
                         </button>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="48I-8k-XKl">
+                            <rect key="frame" x="149" y="209" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="37" id="3Vl-7T-jVS"/>
+                                <constraint firstAttribute="height" constant="37" id="azN-Po-Zyu"/>
+                            </constraints>
+                            <color key="color" red="0.25882352939999997" green="0.147120098" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstItem="48I-8k-XKl" firstAttribute="top" secondItem="IzH-zu-a4h" secondAttribute="bottom" id="FAP-sM-sw2"/>
                         <constraint firstItem="eFE-wu-dOe" firstAttribute="top" secondItem="uyc-wz-SMA" secondAttribute="top" constant="8" id="FP5-Jw-Udi"/>
                         <constraint firstItem="IzH-zu-a4h" firstAttribute="centerX" secondItem="uyc-wz-SMA" secondAttribute="centerX" id="JC6-KN-0nE"/>
                         <constraint firstAttribute="trailing" secondItem="eFE-wu-dOe" secondAttribute="trailing" constant="8" id="T62-iT-YLV"/>
+                        <constraint firstAttribute="trailing" secondItem="48I-8k-XKl" secondAttribute="trailing" constant="149" id="VSW-8i-3Vs"/>
                         <constraint firstAttribute="bottom" secondItem="QyK-la-Vmq" secondAttribute="bottom" constant="20" id="Wxs-Fc-pu9"/>
                         <constraint firstItem="bOg-lO-aWh" firstAttribute="top" secondItem="uyc-wz-SMA" secondAttribute="top" constant="30" id="XKZ-yy-6Ma"/>
                         <constraint firstItem="IzH-zu-a4h" firstAttribute="centerY" secondItem="uyc-wz-SMA" secondAttribute="centerY" id="aL8-4f-za3"/>
                         <constraint firstItem="bOg-lO-aWh" firstAttribute="centerX" secondItem="uyc-wz-SMA" secondAttribute="centerX" id="eFy-NS-GBq"/>
                         <constraint firstAttribute="height" constant="320" id="hFm-tv-7Uy"/>
                         <constraint firstItem="QyK-la-Vmq" firstAttribute="centerX" secondItem="uyc-wz-SMA" secondAttribute="centerX" id="i5C-nK-4iw"/>
+                        <constraint firstItem="48I-8k-XKl" firstAttribute="leading" secondItem="uyc-wz-SMA" secondAttribute="leading" constant="149" id="jw6-aU-V59"/>
+                        <constraint firstItem="QyK-la-Vmq" firstAttribute="top" secondItem="48I-8k-XKl" secondAttribute="bottom" constant="4" id="lUh-gD-PWt"/>
                     </constraints>
                 </view>
             </subviews>

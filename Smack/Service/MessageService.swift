@@ -12,6 +12,7 @@ import Alamofire
 class MessageService {
     public static let instance = MessageService()
     public var channels = [Channel]()
+    public var channel: Channel!
     
     func allChannel(completion: @escaping CompletionHandeler) {
         let header = ["Authorization":"Bearer \(UserSessionManager.instance.getToken())",
@@ -25,6 +26,7 @@ class MessageService {
                     self.channels = try JSONDecoder().decode([Channel].self, from: data)
                     if !self.channels.isEmpty {
                         completion(true,self.channels)
+                        NotificationCenter.default.post(name: NOTIF_LOAD_CHANNEL, object: nil)
                   }
                 }catch let error {
                      print(error.localizedDescription)
@@ -37,6 +39,9 @@ class MessageService {
                
             }
         }
+    }
+    func clearChannel() {
+        channels.removeAll()
     }
     
 }

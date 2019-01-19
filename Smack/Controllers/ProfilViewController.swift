@@ -48,7 +48,7 @@ class ProfilViewController: UIViewController {
         let gFloat = CGFloat(rGreen.doubleValue)
         let bFloat = CGFloat(rBleu.doubleValue)
         let aFloat = CGFloat(rAlpha.doubleValue)
-        return UIColor(red: rFloat, green: bFloat, blue: gFloat, alpha: aFloat)
+        return UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
     }
     @IBAction func onClickClose(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

@@ -20,10 +20,12 @@ let BASE_URL = "https://chatyapismack.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)/account/register"
 let URL_LOGIN = "\(BASE_URL)/account/login"
 let URL_ADD_USER = "\(BASE_URL)/user/add"
-let URL_GET_USER_EMAIL = "\(BASE_URL)/byEmail/"
+let URL_GET_USER_EMAIL = "\(BASE_URL)/user/byEmail/"
 let URL_GET_CHANNEL = "\(BASE_URL)/channel"
 
 let NOTIF_DATA_USER = Notification.Name("notifUserDataChange")
+let NOTIF_LOAD_CHANNEL = Notification.Name("loadChannels")
+let NOTIF_LOAD_SELECTED = Notification.Name("channelSelected")
 
 
 
